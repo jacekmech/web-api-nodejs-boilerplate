@@ -1,0 +1,13 @@
+/api/ping:
+  get:
+    summary: Gets current time from the database.
+    parameters:
+      - in: query
+        name: callerName
+        required: true
+        schema:
+          type: string
+        description: Name of the caller.
+    responses:
+      200:
+        description: Text 'Pong at  ${record.now} for ${callerName}'.
